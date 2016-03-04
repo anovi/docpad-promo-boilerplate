@@ -111,7 +111,7 @@ docpadConfig =
 			for key, val of @site.sharing.og
 				if @document.og?[key]
 					val = @document.og[key]
-				else if @document.basename isnt 'index'
+				else
 					val = @document.title if key is 'title'
 					val = @document.url if key is 'url'
 					val = @document.description if key is 'description' and @document.description
@@ -123,7 +123,7 @@ docpadConfig =
 					val = @document.twitter[key]
 				else if @document.og?[key]
 					val = @document.og[key]
-				else if @document.basename isnt 'index'
+				else
 					val = @document.title if key is 'title'
 					val = @document.title if key is 'text'
 					val = @document.url if key is 'url'
