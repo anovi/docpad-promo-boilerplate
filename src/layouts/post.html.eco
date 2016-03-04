@@ -4,6 +4,6 @@ layout: 'default'
 
 
 <h1><%= @document.title %></h1>
-<div><%- @beautifyDate(@document.date) %></div>
+<p><i><%- @beautifyDate(@document.date) %></i></p>
 
 <%- @content %>

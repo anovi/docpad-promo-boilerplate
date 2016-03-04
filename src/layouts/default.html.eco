@@ -11,19 +11,20 @@
 	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-
-	<div class="content">
-		<div class="row">
-			<div class="sidebar col-xs-12 col-lg-4">
-				<%- @partial('menu.html.eco', {menuItems: @generateMenu(@document.url, "mainMenu")}) %>
-			</div>
-			<div class="col-xs-12 col-lg-8">
-				<%- @content %>
+	<div class="wrapper">
+		<div class="content">
+			<div class="row">
+				<div class="sidebar col-xs-12 col-lg-4">
+					<%- @partial('menu.html.eco', {menuItems: @generateMenu(@document.url, "mainMenu")}) %>
+				</div>
+				<div class="col-xs-12 col-lg-8">
+					<%- @content %>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<%- @partial('footer') %>
+		<%- @partial('footer') %>
+	</div>
 
 
 	<!-- build:js /scripts/scripts.js -->

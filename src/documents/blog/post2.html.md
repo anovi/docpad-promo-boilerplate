@@ -1,16 +1,16 @@
 ---
 layout: 'post'
-title: 'Пост номер два'
+title: 'Out secont super post'
 date: 2016-03-03
 ---
 
-В обновлении добавились:
-* Вставка текста без форматирования ⌘+Shift+V
-* Редактор теперь запоминает размер окна и открывает новые в этом же размере
+Lorem ipsum dolor sit amet:
+* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, nisi!
+* Lorem ipsum dolor sit amet, consectetur.
 
-Минимальная необходимая версия OS X теперь 10.9.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-**Исправления**
-* Исправлено меню на русском языке
-* Дублирование пункта меню «Полноэкранный режим»
-* Не блокировались пункты меню при закрытии всех окон
+**Hello**
+* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quam!
+* Lorem ipsum dolor sit amet, consectetur.
+* Lorem ipsum dolor sit amet.

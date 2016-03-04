@@ -37,12 +37,6 @@ body, html
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
 
-.content
-  margin 0 auto
-  padding 100px 50px
-  max-width textWidth
-  clearfix()
-
 h1, h2, h3, h4, h5, h6
   font-family headerFont
   color dark-color
@@ -71,13 +65,31 @@ p
   vertical-align middle
 
 
+/*
+* > Layout
+*/
+.wrapper
+  padding-bottom 150px
+  position relative
+  min-height 100%
+.content
+  margin 0 auto
+  padding 100px 50px
+  max-width textWidth
+  clearfix()
+footer
+  @extends .content
+  height 150px
+  padding-top 0
+  padding-bottom 0
+  absolute bottom 0 right 0 left 0
+
+
 
 /*
 * > Grid
 */
 @import '../../static/vendor/bootstrap-grid.css'
-
-
 
 
 
@@ -135,8 +147,10 @@ p
   margin-bottom 40px
 
 
-
-
+.main-col
+  margin-bottom 30px
+  +screen-large()
+    margin-bottom 0
 
 
 
