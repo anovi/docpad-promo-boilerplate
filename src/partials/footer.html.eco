@@ -1,0 +1,4 @@
+<footer class="footer">
+	<div>Share it:</div>
+	<%- @partial('sharing') %>
+</footer>

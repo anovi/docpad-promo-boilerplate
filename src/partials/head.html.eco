@@ -1,0 +1,26 @@
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Site Properities -->
+	<title><%= @getPreparedTitle() %></title>
+	<meta name="description" content="<%= @getPreparedDescription() %>" />
+	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+	<link title="Оптима блог" type="application/rss+xml" rel="alternate" href="/rss.xml" />
+
+    <%- @getMetaSharing() %>
+
+	<!-- DocPad Meta -->
+	<%- @getBlock('meta').toHTML() %>
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+	<!-- build:css /styles/styles.css -->
+	<%- @getBlock('styles').add(@site.styles).toHTML() %>
+	<!-- endbuild -->
+	<%- @getBlock('styles').add(@document.styles).toHTML() %>
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+</head>

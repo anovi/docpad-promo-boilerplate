@@ -1,0 +1,16 @@
+---
+layout: 'default'
+title: 'Blog'
+menuOrder: 1
+bodyClass: 'post'
+---
+
+
+<% for page in @getCollection("blog").toJSON(): %>
+	<% text = page.contentRenderedWithoutLayouts %>
+    <article>
+    	<h2><a href="<%= page.url %>"><%- page.title or page.name %></a></h2>
+    	<div><%- @beautifyDate(page.date) %></div>
+        	<%- text %>
+    </article>
+<% end %>

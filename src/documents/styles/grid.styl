@@ -1,0 +1,46 @@
+@import 'nib'
+
+
+/* Settings */
+$settings = {
+  'row': {
+    'width': 100%,
+    'cols': 12,
+    'gutter': 20px
+  }
+}
+$breaks = {
+  'xs': false,
+  'sm': 'min-width: 768px',
+  'md': 'min-width: 992px',
+  'lg': 'min-width: 1200px'
+}
+
+
+.col
+  float left
+  width 100%
+  min-height 1px
+  &.-flex
+    width: auto
+
+for $name, $grid in $settings
+  s('/*! Grid - %s */', unquote($name));
+  s('.%s', unquote($name));
+    clearfix()
+    if gutter in $grid
+      margin: 0 (0 - $grid.gutter / 2)
+
+  for $breakName, $query in $breaks
+    for $i in 1..$grid.cols
+      .col-{$breakName}-{$i}
+        @extend .col
+        width: $grid.width * ($i / $grid.cols)
+
+        if gutter in $grid
+          padding-right: ($grid.gutter / 2)
+          padding-left: ($grid.gutter / 2)
+
+        if $query
+          @media screen and ($query)
+            {block}

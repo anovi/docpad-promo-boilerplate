@@ -1,0 +1,15 @@
+<!-- https://github.com/sergeche/docpad-plugin-menu -->
+
+<% renderMenu = (items) => %>
+    <% for item in items: %>
+    	<% if item.state is 'current': %>
+    		<div class="mainMenu__item"><%= item.title %></div>
+    	<% else: %>
+        	<a class="mainMenu__item" href="<%= item.url %>"><%= item.title %></a>
+        <% end %>
+    <% end %>
+<% end %>
+
+<nav class="mainMenu">
+	<%= renderMenu @menuItems %>
+</nav>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<%- @partial('head.html.eco') %>
+
+<body class="<%= if @document.bodyClass then @document.bodyClass %>">
+	<!--[if lt IE 7]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+
+	<div class="content">
+		<div class="row">
+			<div class="sidebar col-xs-12 col-lg-4">
+				<%- @partial('menu.html.eco', {menuItems: @generateMenu(@document.url, "mainMenu")}) %>
+			</div>
+			<div class="col-xs-12 col-lg-8">
+				<%- @content %>
+			</div>
+		</div>
+	</div>
+
+	<%- @partial('footer') %>
+
+
+	<!-- build:js /scripts/scripts.js -->
+	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+	<!-- endbuild -->
+	<%- @getBlock('scripts').add(@document.scripts).toHTML() %>
+
+	<%- if @getEnvironment() isnt 'development' then @partial('analytics') %>
+</body>
+</html>

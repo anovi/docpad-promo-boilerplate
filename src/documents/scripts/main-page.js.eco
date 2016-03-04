@@ -1,0 +1,3 @@
+/* Your script for main page goes here */
+
+console.log('Main page script for <%= @site.title %>');
