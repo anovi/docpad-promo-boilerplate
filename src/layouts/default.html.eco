@@ -28,7 +28,8 @@
 
 
 	<!-- build:js /scripts/scripts.js -->
-	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+	<% for url in @site.scripts: %><script src="<%= url %>"></script>
+	<% end %>
 	<!-- endbuild -->
 	<%- @getBlock('scripts').add(@document.scripts).toHTML() %>
 

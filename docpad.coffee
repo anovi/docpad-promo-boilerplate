@@ -71,7 +71,6 @@ docpadConfig =
 			# The common website's styles. Will be concatenated
 			styles: [
 				'/vendor/normalize.css'
-				'/vendor/h5bp.css'
 				'/styles/style.css'
 			]
 

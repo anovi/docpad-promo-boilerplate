@@ -18,7 +18,8 @@
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 	<!-- build:css /styles/styles.css -->
-	<%- @getBlock('styles').add(@site.styles).toHTML() %>
+	<% for url in @site.styles: %><link rel="stylesheet" href="<%= url %>" />
+	<% end %>
 	<!-- endbuild -->
 	<%- @getBlock('styles').add(@document.styles).toHTML() %>
 

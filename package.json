@@ -8,7 +8,7 @@
   },
   "scripts": {
     "clean": "rm -r out",
-    "static": "npm run clean && docpad generate --env static"
+    "static": "docpad generate --env static"
   },
   "dependencies": {
     "docpad": "~6.78.4",
