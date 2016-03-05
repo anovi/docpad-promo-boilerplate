@@ -3,7 +3,7 @@ layout: 'default'
 ---
 
 
-<h1><%= @document.title %></h1>
+<h1><%- @rtt @document.title %></h1>
 <p><i><%- @beautifyDate(@document.date) %></i></p>
 
-<%- @content %>
+<%- @rt @content %>

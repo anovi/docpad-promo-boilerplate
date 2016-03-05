@@ -1,5 +1,6 @@
 path = require("path")
 normalizedPath = path.join(__dirname, "data")
+richtypo = require 'richtypo'
 dataObj = {}
 
 require("fs").readdirSync(normalizedPath).forEach (file) =>
@@ -135,12 +136,20 @@ docpadConfig =
 
 		beautifyDate: (date) ->
 			moment = require('moment');
-			moment.locale('ru');
+			moment.locale('en');
 			return moment(date).format('D MMMM YYYY');
 
 		# Get the Absolute URL of a document
 		getDocUrl: (document) ->
 			return @site.url + (document.url or document.get?('url'))
+
+		# Richtypo.js
+		rt: (s) ->
+			s and (richtypo.rich(s))
+
+		# Richtypo.js: title
+		rtt: (s) ->
+			s and (richtypo.title s)
 
 
 	# =================================
@@ -217,6 +226,9 @@ docpadConfig =
 	# You can find a full listing of events on the DocPad Wiki
 
 	events:
+		generateBefore: (opts) ->
+			# Configure Richtypo.js
+			richtypo.lang('ru')
 
 		# Server Extend
 		# Used to add our own custom routes to the server before the docpad routes are added

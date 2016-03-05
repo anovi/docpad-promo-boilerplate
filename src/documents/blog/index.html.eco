@@ -9,8 +9,8 @@ bodyClass: 'post'
 <% for page in @getCollection("blog").toJSON(): %>
 	<% text = page.contentRenderedWithoutLayouts %>
 	<article>
-		<h2><a href="<%= page.url %>"><%- page.title or page.name %></a></h2>
+		<h2><a href="<%= page.url %>"><%- @rt(page.title or page.name) %></a></h2>
 		<p><i><%- @beautifyDate(page.date) %></i></p>
-		<%- text %>
+		<%- @rt text %>
 	</article>
 <% end %>
