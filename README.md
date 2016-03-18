@@ -1,36 +1,44 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com/) skeleton for [DocPad](https://github.com/bevry/docpad)
-Bare essentials for building a modern website with best practices
+Boilerplate for building static promo sites with Docpad.
+
+Tools:
+- Helper to create meta tags for social sharing
+- [Likely](https://github.com/ilyabirman/Likely) — social buttons without jQuery
+- [richtypo.js](https://github.com/sapegin/richtypo.js) for better typography
+- Custom solution for supplying data to templates from JSON files
+- [Stylus](http://stylus-lang.com/) — CSS-preprocessor
+- Gulp — concatenates and minifies code for production
 
 
 ## Getting Started
 
 1. [Install DocPad](https://github.com/bevry/docpad)
 
-1. Clone the project and run the server
+2. Clone the project. Then go to project folder and run:
 
 	``` bash
-	mkdir my-website
-	cd my-website
-	docpad run --skeleton h5bp
+    npm install
+	docpad run
 	```
 
-1. [Open http://localhost:9778/](http://localhost:9778/)
+3. Open [http://localhost:9778/](http://localhost:9778/)
 
-1. Start hacking away by modifying the `src` directory
+4. Start hacking away by modifying the `src` directory
 
 
-## License
+## Build for production
 
-This skeleton is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
+Just run:
 
-If you are wanting to open-source your website, we suggest using the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) for content and the [MIT License](http://creativecommons.org/licenses/MIT/) for code. In which case you'd probably want to use the following as your license:
+    ``` bash
+    npm run static
+    ```
+And then grab files in `out` directory.
 
-	Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Your Name](http://your.website)
 
-If you are wanting to close-source your website, we'd suggest using the following:
+## Deploy
+There is no task for deploying—choose you own method.
+If you deploy via FTP, then you may use [vinyl-ftp](https://github.com/morris/vinyl-ftp)
 
-	Copyright [Your Name](http://your.website). All rights reserved.
 
-Other included things such as themes and libraries are likely already licensed by their own invidual licenses, so be sure to respect their licenses too.
-
-Thanks, the DocPad team loves you.
+## Typography
+## Meta tags for social sharing
